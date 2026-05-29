@@ -3,10 +3,10 @@
 def counting_sort(array):
     # initialize a counter size of distinct values
     lower_bound, upper_bound = min(array), max(array)
-    counter = [0]*(upper_bound-lower_bound+1)
+    counter = [0] * (upper_bound-lower_bound+1)
     # set the position of each item from min value referenced by occurrence
     for item in array:
-        counter[item-lower_bound]+=1
+        counter[item-lower_bound] += 1
     position = 0
     # set the actual position of the element
     for idx, item in enumerate(counter):

@@ -8,7 +8,10 @@ def radix_sort(array):
     digits = len(str(max(array)))
 
     for digit in range(digits):
-        buckets = [[] for i in range(10)]
+        buckets = [
+                []
+                for i in range(10)
+                ]
         for num in array:
             index = modulo(lsd(num, digit))
             buckets[index].append(num)

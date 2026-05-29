@@ -1,21 +1,15 @@
 #!/bin/env python3
 
-def longest_arith_progression(arr):
-    n = len(arr)
-
-    # Base Case for list with a single item
+def longest_arith_subsequence(arr):
+    n, max_len  = len(arr), 2
     if n <= 1:
         return n
+    # dp is a [ { diff: length of subsequence ending at i}, ... ]
+    dp = [
+            {}
+            for _ in range(n)
+            ]
 
-    # Initialize an adjacent list of map in format:
-    # [
-    #   { diff: count },
-    #   ...
-    # ]
-    dp = [{} for _ in range(n)]
-    max_len = 2
-    # It seems like straight O(n^2) runtime
-    # But the iteration is actually: O(n(n-1))
     for u in range(n):
         for v in range(u):
             diff = arr[u] - arr[v]
@@ -23,6 +17,7 @@ def longest_arith_progression(arr):
             max_len = max(max_len, dp[u][diff])
     return max_len
 
+# Example Usage
 if __name__ == '__main__':
-    seq = [4, 2, 1, 7, 5, 10, 9]
-    print(longest_arith_progression(seq))
+    arr1 = [3, 4, 5, 2, 10, 7, 9, 13, 11]
+    print(longest_arith_subsequence(arr1))
