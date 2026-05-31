@@ -1,9 +1,7 @@
 #!/bin/env python3
 
-
 def coin_change(coins, amt):
     coins.sort()
-
     dp = [-1] * (amt + 1)
     dp[0] = 0
 
