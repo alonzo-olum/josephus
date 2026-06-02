@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-class Kadane:
+class Solution:
     def __init__(self, arr):
         self.arr =  arr
 
@@ -14,6 +14,6 @@ class Kadane:
 
 # main block
 if __name__ == '__main__':
-    k = Kadane([1,4,1,-2,3,5,-6])
-    k.max_subarray()
+    s = Solution([1,4,1,-2,3,5,-6])
+    s.max_subarray()
 
