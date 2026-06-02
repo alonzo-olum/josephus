@@ -2,7 +2,7 @@
 
 def coin_change(coins, amt):
     coins.sort()
-    dp = [-1] * (amt + 1)
+    dp    = [-1] * (amt + 1)
     dp[0] = 0
 
     for curr in range(1, amt + 1):
