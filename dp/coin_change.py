@@ -20,6 +20,6 @@ def coin_change(coins, amt):
 # main block
 if __name__ == '__main__':
     coins = [1, 2, 5]
-    amt = 11
+    amt   = 11
 
     print(coin_change(coins, 11))

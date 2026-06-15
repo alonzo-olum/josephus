@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 def merge_intervals(intervals):
-    intervals.sort(key=lambda x: x[0])
+    if not intervals:
+        return intervals
 
+    intervals.sort(key=lambda x: x[0])
     merge = [intervals[0]]
 
     for current in intervals[1:]:
@@ -14,6 +16,8 @@ def merge_intervals(intervals):
     return merge
 
 # main block
-
 intervals = [[1,3], [2,6], [8,10], [15,18]]
-print("[merge_intervals] %s\n" % (merge_intervals(intervals)))
+intervals2 = [[1,4], [0,0]]
+intervals3 = [[4,7],[1,4]]
+intervals4 = []
+print("[merge_intervals] %s\n" % (merge_intervals(intervals4)))
