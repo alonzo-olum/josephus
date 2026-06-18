@@ -20,7 +20,6 @@ def climb_stairs_dp(n):
         dp[i] = dp[i - 1] + dp[i - 2];
     return dp[n - 1]
 
-
 # main block
 if __name__ == '__main__':
     print(climb_stairs_dp(5))
