@@ -1,5 +1,6 @@
 #!/bin/env python3
-
+# The sublime soln that works is via the graph pattern
+# This current soln disregards latter indices in a case where consecutive seq has already been established. 
 def longest_arith_subsequence(arr):
     n, max_len  = len(arr), 2
     if n <= 1:
